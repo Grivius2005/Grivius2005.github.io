@@ -1,0 +1,39 @@
+ tło strony - deski https://cdn.pixabay.com/photo/2017/04/05/01/20/wood-2203740_1280.jpg
+
+
+header, footer, czarne tło 100%, 5px padding, font:  'Cookie', cursive;
+
+header logo 20% width, margin-left, img 60px https://cdn.pixabay.com/photo/2012/04/01/16/51/pizza-23477_960_720.png
+
+header menu width 60%, lista wycentrowana, elementy liniowe  z padding od lewej, linki 1.4rem,
+
+  linki menu hover kolor: #FFD77F, normalnie białe
+
+
+  slider połówka czcionka cursive
+
+
+  przycisk zamówienia, kolor czcionki i obramowania #7FD7FF
+
+  przycisk rezerwacji, kolor czcionki i obramowania #FFD77F, tło #936c02
+
+  hover obu przycisków #333333
+
+
+  tło pizzy w połówce slidera https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg
+
+
+ 
+
+
+
+
+  najlepsze składniki tło https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361__340.jpg
+
+  oryginalne receptury tło https://cdn.pixabay.com/photo/2016/05/06/12/15/cook-1375788_960_720.jpg
+
+  szybka dostawa tło https://cdn.pixabay.com/photo/2020/02/10/18/31/motor-scooter-4837310_960_720.jpg
+
+    alternatywnie https://cdn.pixabay.com/photo/2017/10/15/01/00/prague-2852349_960_720.jpg
+
+

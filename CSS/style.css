@@ -1,0 +1,246 @@
+body
+{
+    background-image: url(https://cdn.pixabay.com/photo/2017/04/05/01/20/wood-2203740_1280.jpg);
+}
+
+header, footer
+{
+    width: 99.5%;
+    height: 275px;
+    background-color: black;
+    padding: 5px;
+    font-family: 'Cookie', cursive;
+}
+#menu
+{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    
+}
+#menu img
+{
+    width: 60px;
+    height: 60px;
+    float: left;
+    position: relative;
+    left: 10px;
+
+}
+#numer
+{
+    float: right;
+    font-weight: normal;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    position: relative;
+    right: 200px;
+}
+
+#menu p
+{
+    margin: 0 auto;
+    color: white;
+    display: inline;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 0 1%;
+    position: relative;
+    top: 10px;
+}
+
+#menu p:hover
+{
+    color: #FFD77F;
+    cursor: pointer;
+}
+
+#slider
+{
+    border: 0.1px solid;
+    width: 100.1%;
+    height: 217px;
+    background-image: url(../Dane/pizza-3007395_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1200px 800px;
+}
+
+#slider p
+{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin-left: 50px;
+    margin-top: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+hr
+{
+    width: 50px;
+    margin-left: 50px;
+    position: relative;
+    bottom: 10px;
+    width: 45%;
+    height: 0.5px;
+    color: white;
+    background-color: white;
+}
+
+#zamow
+{
+    color: #7FD7FF;
+    border: 1px solid #7FD7FF;
+    float: left;
+    margin-left: 50px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 50px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: relative;
+    bottom: 10px;
+}
+
+#rezer
+{
+    color: white;
+    border: 1px solid white;
+    float: left;
+    margin-left: 10px;
+    background-color: #936c02;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 49px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: relative;
+    bottom: 10px;
+}
+
+#zamow:hover ,#rezer:hover
+{
+    cursor: pointer;
+    background-color: #333333;
+}
+
+main
+{
+    width: 100%;
+    margin-top: 50px;
+    background-color: none;
+}
+
+#gora div
+{
+    width: 33%;
+    height: 150px;
+    background-color: black;
+    display: inline-block;
+    border: 6px solid black;
+}
+#gora
+{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 50px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+#image1
+{
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361__340.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px 500px;
+    position: relative;
+ 
+}
+
+#image2
+{
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/06/12/15/cook-1375788_960_720.jpg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px 500px;
+    position: relative;
+ 
+}
+
+#image3
+{
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/10/18/31/motor-scooter-4837310_960_720.jpg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px 500px;
+    position: relative;
+    
+}
+
+#image1 p,#image2 p,#image3 p
+{
+    text-align: center;
+    color: white;
+    position: absolute;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    font-size: 20px;
+}
+
+#dol
+{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    height: 500px;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#dol div
+{
+    width: 25%;
+    height: 475px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 40px;
+}
+
+img
+{
+    width: 85%;
+    height: 70%;
+}
+
+footer
+{
+    width: 99.6%;
+    height: 50px;
+    text-align: center;
+}
+
+footer p
+{
+    color: white;
+    display: inline;
+    font-size: 25px;
+    text-decoration: underline;
+    margin-right: 1%;
+    margin-left: 1%;
+    position: relative;
+    left: 10px;
+}
+
+footer p:hover
+{
+    color: #FFD77F;
+    cursor: pointer;
+}
