@@ -1,0 +1,56 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+body
+{
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+h1
+{
+    margin-bottom: 25px;
+    font-size: 50px;
+    color:white;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+main div
+{
+    min-width: 250px;
+    background-image: radial-gradient(lime 2%, green 97%);
+    color: black;
+    padding: 10px;
+    border: 3px outset grey;
+    box-shadow: 0 0 5px 5px black;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+main div:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
