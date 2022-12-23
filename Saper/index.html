@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saper</title>
+    <link rel="shortcut icon" href="resource/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main id="mainBlock">
+        <div id="records">
+            <h2 id="recordsText" style="text-align: center;">Zacznij grać, by zobaczyć wynik dla wybranego trybu</h2>
+            <table id="recordsTable">
+                <tr>
+                    <th>
+                        Nick
+                    </th>
+                    <th>
+                        Czas
+                    </th>
+                </tr>
+
+            </table>
+        </div>
+        <form id="startScreen">
+            <label for="areax">Ilość kolumn: </label>
+            <input type="number" id="areax" value="15">
+            <label for="areay">Ilość wierszy: </label>
+            <input type="number" id="areay" value="15">
+            <label for="minesCount">Ilość bomb: </label>
+            <input type="number" id="minesCount" value="15">
+            <label for="nick">Nick: </label>
+            <input type="text" id="nick" placeholder="Jeff#">
+            <button type="button" id="startGame" onclick="getMineData()">Start</button>
+        </form>
+        <div id="game">
+            <table>
+                <tr class="info">
+                    <th>
+                        Flagi<br><span id="flags">00</span>
+                    </th>
+                    <th>
+                        Czas<br><span id="time">0:00.000</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding:5px;">
+                        <table id="saperArea">
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </main>
+    <div id="gameOver">
+        <h2 id="gameOverMessage">Default</h2>
+        <p>Twój czas to: <span id="timeEnd">0:00.0</span></p>
+        <p>Ilość akcji: <span id="actionClikcs">0</span></p>
+        <button type="button" id="acceptGameOver" onclick="gameOverAccept()">Kontynuuj</button>
+    </div>
+</body>
+</html>
