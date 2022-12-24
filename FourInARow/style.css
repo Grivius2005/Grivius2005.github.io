@@ -126,3 +126,24 @@ table div
     background-position: 0 0;
   }
 }
+
+@media screen and (max-width: 750px) {
+  table th, table td
+  {
+    width: 37px;
+    height: 37px;
+  }
+  .cursor
+  {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 25px solid white;
+  }
+
+.coin
+{
+  width: 25px;
+  height: 25px;
+}
+  
+}
