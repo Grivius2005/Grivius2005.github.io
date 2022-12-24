@@ -4,14 +4,14 @@ class Board
     {
         this.boardTable = document.getElementById("board")
         this.cursors = document.getElementById("cursors")
-        this.moveP = document.getElementById("pMove")
+        this.statusP = document.getElementById("pStatus")
         this.winP = document.getElementById("pWin")
         this.boardTable.innerHTML = ""
         this.cursors.innerHTML = ""
         this.board = []
         this.withPlayerMove = "Red"
-        this.moveP.innerText = `${this.withPlayerMove} move`
-        this.moveP.style.color = "red"
+        this.statusP.innerText = `${this.withPlayerMove} move`
+        this.statusP.style.color = "red"
         for(let i=0;i<7;i++)
         {
             const thElem = document.createElement("th")
@@ -75,8 +75,8 @@ class Board
                     coin.style.backgroundColor = "red"
                     this.boardTable.children[i].children[column].appendChild(coin)
                     this.withPlayerMove = "Yellow"
-                    this.moveP.style.color = "yellow"
-                    this.moveP.innerText = `${this.withPlayerMove} move`
+                    this.statusP.style.color = "yellow"
+                    this.statusP.innerText = `${this.withPlayerMove} move`
                     return
                 }
                 else
@@ -87,8 +87,8 @@ class Board
                     coin.style.backgroundColor = "yellow"
                     this.boardTable.children[i].children[column].appendChild(coin)
                     this.withPlayerMove = "Red"
-                    this.moveP.style.color = "red"
-                    this.moveP.innerText = `${this.withPlayerMove} move`
+                    this.statusP.style.color = "red"
+                    this.statusP.innerText = `${this.withPlayerMove} move`
                     return 
                 }
 
