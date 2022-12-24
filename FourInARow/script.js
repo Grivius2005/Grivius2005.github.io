@@ -4,11 +4,14 @@ class Board
     {
         this.boardTable = document.getElementById("board")
         this.cursors = document.getElementById("cursors")
+        this.moveP = document.getElementById("pMove")
+        this.winP = document.getElementById("pWin")
         this.boardTable.innerHTML = ""
         this.cursors.innerHTML = ""
         this.board = []
-        this.withPlayerMove = 1
-
+        this.withPlayerMove = "Red"
+        this.moveP.innerText = `${this.withPlayerMove} move`
+        this.moveP.style.color = "red"
         for(let i=0;i<7;i++)
         {
             const thElem = document.createElement("th")
@@ -64,14 +67,16 @@ class Board
         {
             if(this.board[i][column] == 0)
             {
-                if(this.withPlayerMove == 1)
+                if(this.withPlayerMove == "Red")
                 {
                     this.board[i][column] = 1
                     const coin = document.createElement("div")
                     coin.classList.add("coin")
-                    coin.style.backgroundColor = "lime"
+                    coin.style.backgroundColor = "red"
                     this.boardTable.children[i].children[column].appendChild(coin)
-                    this.withPlayerMove = 2
+                    this.withPlayerMove = "Yellow"
+                    this.moveP.style.color = "yellow"
+                    this.moveP.innerText = `${this.withPlayerMove} move`
                     return
                 }
                 else
@@ -79,9 +84,11 @@ class Board
                     this.board[i][column] = 2
                     const coin = document.createElement("div")
                     coin.classList.add("coin")
-                    coin.style.backgroundColor = "cyan"
+                    coin.style.backgroundColor = "yellow"
                     this.boardTable.children[i].children[column].appendChild(coin)
-                    this.withPlayerMove = 1
+                    this.withPlayerMove = "Red"
+                    this.moveP.style.color = "red"
+                    this.moveP.innerText = `${this.withPlayerMove} move`
                     return 
                 }
 

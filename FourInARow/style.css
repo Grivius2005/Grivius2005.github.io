@@ -18,7 +18,7 @@ main
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:50px;
+  gap:25px;
   margin: 50px auto;
 }
 
@@ -69,6 +69,12 @@ main
 {
   border: 1px solid gray;
 }
+
+#pMove
+{
+  font-size: 50px;
+}
+
 
 table
 {
