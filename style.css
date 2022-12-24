@@ -56,5 +56,18 @@ main div:hover
     transform: scale(1.1);
     box-shadow: 0 0 40px 10px black;
     cursor: pointer;
+}
 
+@media screen and (max-width: 750px) 
+{
+    h1
+    {
+        font-size: 25px;
+    }
+    main div
+    {
+        min-width: 125px;
+        font-size: 12px;
+    }
+    
 }
