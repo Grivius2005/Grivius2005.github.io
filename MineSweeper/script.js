@@ -373,7 +373,7 @@ function timeSpan()
 function getFromCookie(x,y,bomb)
 {
     let tabela = document.getElementById("recordsTable")
-    tabela.innerHTML = "<tr><th>Nick</th><th>Czas</th></tr>"
+    tabela.innerHTML = "<tr><th>Nick</th><th>Time</th></tr>"
     let rekordy = document.cookie.split("; ")
     for(let i=0;i<rekordy.length;i++)
     {
