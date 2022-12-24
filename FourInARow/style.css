@@ -130,7 +130,7 @@ table div
 @media screen and (max-width: 750px) {
   #pStatus
   {
-  font-size: 25px;
+    font-size: 25px;
   }
   table th, table td
   {
@@ -144,10 +144,10 @@ table div
   border-top: 25px solid white;
   }
 
-.coin
-{
-  width: 25px;
-  height: 25px;
-}
+  .coin
+  {
+    width: 25px;
+    height: 25px;
+  }
   
 }

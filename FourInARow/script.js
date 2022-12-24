@@ -5,18 +5,21 @@ class Board
         this.boardTable = document.getElementById("board")
         this.cursors = document.getElementById("cursors")
         this.statusP = document.getElementById("pStatus")
-        this.winP = document.getElementById("pWin")
         this.boardTable.innerHTML = ""
         this.cursors.innerHTML = ""
         this.board = []
         this.withPlayerMove = "Red"
-        this.statusP.innerText = `${this.withPlayerMove} move`
+        this.statusP.innerText = `${this.withPlayerMove}'s move`
         this.statusP.style.color = "red"
         for(let i=0;i<7;i++)
         {
             const thElem = document.createElement("th")
             thElem.onmouseover = (e) => {
                 this.showCursor(e,i)
+            }
+            thElem.onclick = () =>
+            {
+                this.addCoin(i)
             }
             this.cursors.appendChild(thElem)
         }
@@ -76,7 +79,8 @@ class Board
                     this.boardTable.children[i].children[column].appendChild(coin)
                     this.withPlayerMove = "Yellow"
                     this.statusP.style.color = "yellow"
-                    this.statusP.innerText = `${this.withPlayerMove} move`
+                    this.statusP.innerText = `${this.withPlayerMove}'s move`
+                    this.checkWin()
                     return
                 }
                 else
@@ -88,7 +92,8 @@ class Board
                     this.boardTable.children[i].children[column].appendChild(coin)
                     this.withPlayerMove = "Red"
                     this.statusP.style.color = "red"
-                    this.statusP.innerText = `${this.withPlayerMove} move`
+                    this.statusP.innerText = `${this.withPlayerMove}'s move`
+                    this.checkWin()
                     return 
                 }
 
@@ -98,7 +103,51 @@ class Board
 
     checkWin()
     {
-        
+        for(let i=3;i>=0;i--)
+        {
+            for(let j=6;j>=0;j--)
+            {
+                if(this.board[i][j] == this.board[i+1][j] && this.board[i+1][j] == this.board[i+2][j] && this.board[i+2][j] == this.board[i+3][j] && this.board[i][j] != 0)
+                {
+                    this.endGame(this.board[i][j])
+                }
+                if(this.board[j][i] == this.board[j][i+1] && this.board[j][i+1] == this.board[j][i+2] && this.board[j][i+2] == this.board[j][i+3] && this.board[j][i] != 0)
+                {
+                    this.endGame(this.board[j][i])
+                }
+            }
+            for(let j=3;j>=0;j--)
+            {
+                if(this.board[i][j] == this.board[i+1][j+1] && this.board[i+1][j+1] == this.board[i+2][j+2] && this.board[i+2][j+2] == this.board[i+3][j+3] && this.board[i][j] != 0)
+                {
+                    this.endGame(this.board[i][j])
+                }
+                if(this.board[i][6-j] == this.board[i+1][5-j] && this.board[i+1][5-j] == this.board[i+2][4-j] && this.board[i+2][4-j] == this.board[i+3][3-j] && this.board[i][6-j] != 0)
+                {
+                    this.endGame(this.board[i][6-j])
+                }
+            }
+        }
+    }
+
+    endGame(color)
+    {
+        this.statusP.innerText = `${(color == 1 ? "Red" : "Yellow")} wins!`
+        this.statusP.style.color = (color == 1 ? "red" : "yellow")
+        for(let i=0;i<7;i++)
+        {
+            this.cursors.children[i].onclick = null
+            this.cursors.children[i].innerHTML = ""
+            this.cursors.children[i].onclick = null
+            this.cursors.children[i].onmouseover = null
+            this.cursors.children[i].onmouseout = null
+            for(let j=0;j<7;j++)
+            {
+                this.boardTable.children[i].children[j].onclick = null
+                this.boardTable.children[i].children[j].onmouseover = null
+                this.boardTable.children[i].children[j].onmouseout = null
+            }
+        }
     }
 
 }
