@@ -31,17 +31,17 @@ function getMineData()
     }
     if((isNaN(areax) || isNaN(areay) || isNaN(minesCount)) || (areax<=0 || areay<=0 || minesCount < 0) || (areax > 80 || areay > 80))
     {
-        alert("Wpisz odpowiednio dane! ( x i y z zakresu (0;80> )")
+        alert("Data entered incorrectly! ( x & y from (0;80> )")
         return;
     }
     if(minesCount > areax*areay)
     {
-        alert("Nie za dużo tych bomb troche?")
+        alert("Too much bombs")
         return;
     }
     if(minesCount == 0)
     {
-        alert("Chyba nie chcesz pójść na taką łatwizne, co nie?")
+        alert("Too easy for you I think")
         return;
     }
     flags = minesCount
@@ -65,7 +65,7 @@ function getMineData()
     }
     gamePlaying = true;
     saperArea.style = "filter: brightness(1.0);"
-    startGameBtn.innerText = "Nowa gra"
+    startGameBtn.innerText = "New Game"
     startGameBtn.onclick = newGame
     saperArea.innerHTML = "<table></table>"
     for(let i=0;i<inputs.length;i++)
@@ -167,7 +167,7 @@ function reveal(x,y,thisBlock)
             clearInterval(timeCount);
             document.getElementById("timeEnd").innerText = timeShow.innerText;
             document.getElementById("actionClikcs").innerText = eventClicks;
-            document.getElementById("gameOverMessage").innerText = "Przegrałeś"
+            document.getElementById("gameOverMessage").innerText = "You lost!"
             revealBombs()
             newGame()
         }
@@ -193,7 +193,7 @@ function reveal(x,y,thisBlock)
                 clearInterval(timeCount);
                 document.getElementById("timeEnd").innerText = timeShow.innerText;
                 document.getElementById("actionClikcs").innerText = eventClicks;
-                document.getElementById("gameOverMessage").innerText = "Wygrałeś"
+                document.getElementById("gameOverMessage").innerText = "You won!"
                 let d = new Date()
                 d.setTime(d.getTime() + (10 * 12 * 31 * 24 * 60 * 60 * 1000));
                 document.cookie = `${encodeURIComponent(nameCode(nick))}-${areax}/${areay}/${minesCount} = ${timeShow.innerText}; expires=${d.toUTCString()}; SameSite=None; Secure`
