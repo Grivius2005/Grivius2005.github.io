@@ -1,0 +1,122 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  background: radial-gradient(#1d1d1d,#1a1a1a,#000000) fixed;
+  color: white;
+}
+
+main
+{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:50px;
+  margin: 50px auto;
+}
+
+#newGame
+{
+  position: relative;
+  width: 25%;
+  height: 30px;
+  color: white;
+  background: #111;
+  border: none;
+  border-radius: 10px;
+  animation: glow 30s linear infinite;
+
+}
+#newGame::before
+{
+  content: "";
+  background: linear-gradient(
+      45deg,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #002bff,
+      #00ffd5,
+      #48ff00
+      
+  );
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  z-index: -1;
+  border-radius: 10px;
+  filter: blur(5px);
+  background-size: 400%;
+  animation: glow 30s linear infinite;
+}
+
+#newGame:hover
+{
+  cursor: pointer;
+}
+
+#newGame:active
+{
+  border: 1px solid gray;
+}
+
+table
+{
+  border-collapse: collapse;
+}
+table th, table td
+{
+  width: 75px;
+  height: 75px;
+}
+tbody
+{
+  border: 1px solid white;
+}
+tbody th, tbody td
+{
+  border: 1px solid white;
+}
+
+table div
+{
+  margin: 0 auto;
+}
+
+.cursor
+{
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid white;
+}
+
+.coin
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
