@@ -390,7 +390,7 @@ function getFromCookie(x,y,bomb)
         }
     }
     daneRekordy.sort(sortByTime)
-    document.getElementById("recordsText").innerText = `Top 10 dla ${tryb}`
+    document.getElementById("recordsText").innerText = `Top 10 for ${tryb}`
     if(daneRekordy.length >= 10)
     {
         for(let i=0;i<10;i++)
