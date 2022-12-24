@@ -128,12 +128,32 @@ class Board
                 }
             }
         }
+        for(let i=6;i>=0;i--)
+        {
+            for(let j=6;j>=0;j--)
+            {
+                if(this.board[i][j] == 0)
+                {
+                    return
+                }
+            }
+        }
+        this.endGame("Draw")
     }
 
     endGame(color)
     {
-        this.statusP.innerText = `${(color == 1 ? "Red" : "Yellow")} wins!`
-        this.statusP.style.color = (color == 1 ? "red" : "yellow")
+        if(color == "Draw")
+        {
+            this.statusP.innerText = "Draw!"
+            this.statusP.style.color = "orange"
+        }
+        else
+        {
+            this.statusP.innerText = `${(color == 1 ? "Red" : "Yellow")} wins!`
+            this.statusP.style.color = (color == 1 ? "red" : "yellow")
+        }
+
         for(let i=0;i<7;i++)
         {
             this.cursors.children[i].onclick = null
