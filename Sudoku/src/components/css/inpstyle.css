@@ -1,0 +1,188 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+#file
+{
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: fit-content;
+    background-color: #11998e;
+    box-shadow: 0 0 15px 5px black;
+    border-radius: 25px;
+    margin: 100px auto;  
+    padding: 20px;
+    color: black;
+}
+
+
+h2
+{
+    text-align: center;
+    font-size: 50px;
+}
+
+#file-input, #select-input
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255,0.2);
+    border-radius: 25px;
+}
+
+#file-input p
+{
+    font-size: 25px;
+}
+
+.file-upload
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    min-width: 100px;
+    padding: 15px;
+    background-color: rgb(20, 20, 20);
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.file-upload:hover
+{
+    cursor: pointer;
+    background-color: rgba(65, 65, 65);
+}
+
+.file-upload:active
+{
+    background-color: rgb(65, 65, 65);
+}
+
+input[type="file"]
+{
+    display: none;
+}
+
+#isGood
+{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+}
+
+
+#difficulty
+{
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+
+#startGame, #generateSudoku
+{
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    background:linear-gradient(0deg, #1b3dff, #275dff);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+#startGame:hover, #generateSudoku:hover
+{
+    cursor: pointer;
+}
+
+#startGame:active, #generateSudoku:active
+{
+    background: linear-gradient(0deg, #275dff, #1b3dff) ;
+    border: 1px solid black;
+}
+
+
+
+@media only screen and (max-width:1440px)
+{
+
+    h2
+    {
+        font-size: 40px;
+    }
+
+    #file-input
+    {
+        gap: 12px;
+    }
+
+    #file-input p
+    {
+        font-size: 20px;
+    }
+
+    .file-upload:hover
+    {
+        cursor: pointer;
+        background-color: rgb(70, 70, 70);
+    }
+
+    .file-upload:active
+    {
+        background-color: rgb(39, 39, 39);
+    }
+
+    input[type="file"]
+    {
+        display: none;
+    }
+
+    #startGame,#generateSudoku
+    {
+        width: 50%;
+        height: 50px;
+    }
+
+
+}
+
+@media only screen and (max-width:990px)
+{
+    h2
+    {
+        font-size: 40px;
+    }
+
+    #file
+    {
+        width: 60%;
+    }
+
+
+}
