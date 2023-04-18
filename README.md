@@ -1,3 +1,3 @@
-# Static website with games I created for exercises
+# Static website with games I created for exercise
 
 ##### Other info in future
