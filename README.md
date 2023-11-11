@@ -1,6 +1,8 @@
-# Static website with games I created for fun and learning
+# Description 
 
-## Small Legend
+Static website with games I created for fun and learning
+
+# Small Legend
 
 - :computer: - game can be played on computer
 - :iphone: - game can be played on phone
