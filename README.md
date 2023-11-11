@@ -1,6 +1,6 @@
 # Description 
 
-Static website with games created for fun and learning
+Static website with games created for fun and learning.
 
 # Small Legend
 
